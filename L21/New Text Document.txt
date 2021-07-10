@@ -1,0 +1,12 @@
+// wajp to wish the user GM / GA / GE depending on the system time.
+import java.text.*;
+import java.util.*;
+class P1
+{
+public static void main(String args[])
+{
+Date dt = new Date();
+DateFormat d = DateFormat.getTimeInstance();
+System.out.println(d.format(dt));
+}
+}

@@ -1,0 +1,23 @@
+//step 1) creating persistence class
+class Emp
+{
+private int eid;
+print String ename;
+
+public void setEid(int eid)
+{
+this.eid = eid;
+}
+public int getEid()
+{
+return eid;
+}
+public String setEname(String ename)
+{
+this.ename = ename;
+}
+public void getEname()
+{
+return ename;
+}
+}
