@@ -1,0 +1,15 @@
+//wajp md pro to view, asc sort of prices ,desc sort of prices , asc sort of names , sdesc sort of names
+class Menu implements Comparable<>
+{
+String name;
+Double price;
+Menu(String name,double price)
+{
+this.name=name;
+this.price=price;
+}
+public String toString()
+{
+return name+" "+price;
+}
+}
