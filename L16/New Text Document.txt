@@ -1,0 +1,53 @@
+import java.io.*;
+enum Selection 
+{
+ROCK , PAPER , SCISSOR;
+int a;
+}
+
+class Game
+{
+public static void main(String args[])
+{
+Selection comp,user;
+Console c = System.console();
+String f ="Score.txt";
+File fl = new File(f);
+int t=0,wuser=0,wcomp=0;
+int r= (int)(Math.radom() *3);
+if (r==0) comp= Selection.ROCK;
+else if (r==1) comp=Selection.PAPER;
+else if(r==2) comp=Selection.SCISSOR;
+int n = Integer.parseInt(c.readLIne("Enter number of matches "));
+int i = 1;
+while(i++ < n)
+{
+System.out.println("0. ROCK 1. PAPER 2. SCISSOR  ");
+int o = Integer.parseInt(c.readLine("Enter option "));
+if (o==0) user= Selection.ROCK;
+else if (o==1) user=Selection.PAPER;
+else if(o==2) user=Selection.SCISSOR;
+
+if (comp==user)
+t++;
+else if (user==Selection.ROCK && comp= Selection.SCISSOR) wuser++;
+else if (user==Selection.PAPER && comp= Selection.ROCK) wuser++;
+else if (user==Selection.SCISSOR && comp= Selection.PAPER) wuser++;
+else if (user==Selection.ROCK&& comp= Selection.PAPER) wcomp++;
+else if (user==Selection.PAPER && comp= Selection.SCISSOR) wcomp++;
+else if (user==Selection.SCISSOR && comp= Selection.ROCK) wcomp++;
+}
+
+System.out.println("TIE "+tie +" USER WINS "+wuser+" COMP WINS "+wcomp);
+try
+{
+FileWriter fw = new FileWriter(fl);
+PrintWriter pw = new PrintWriter(fw);
+pw.println("TIE "+tie +" USER WINS "+wuser+" COMP WINS "+wcomp java.util.Date());
+pw.close()
+}
+catch(IOException e)
+{
+System.out.println("writing mist "+e);
+}
+}}
